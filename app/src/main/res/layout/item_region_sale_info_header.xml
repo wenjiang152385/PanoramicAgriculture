@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFF5F5F5"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/list_divider_height"
+    android:paddingTop="@dimen/list_divider_height">
+
+    <Spinner
+        android:id="@+id/region_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/list_divider_height"
+        android:gravity="right|center_vertical" />
+
+    <RadioGroup
+        android:id="@+id/rg_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/list_divider_height"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_today"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/s_radio_button"
+            android:drawablePadding="5dp"
+            android:button="@null"
+            android:textSize="11sp"
+            android:textColor="#333333"
+            android:checked="true"
+            android:text="今天" />
+
+        <RadioButton
+            android:id="@+id/rb_yesterday"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/s_radio_button"
+            android:drawablePadding="5dp"
+            android:button="@null"
+            android:layout_gravity="center"
+            android:textSize="11sp"
+            android:textColor="#333333"
+            android:text="昨天" />
+
+        <RadioButton
+            android:id="@+id/rb_before_yesterday"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/s_radio_button"
+            android:drawablePadding="5dp"
+            android:button="@null"
+            android:layout_gravity="center"
+            android:textSize="11sp"
+            android:textColor="#333333"
+            android:text="前天" />
+
+        <RadioButton
+            android:id="@+id/rb_more"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:drawableLeft="@drawable/s_radio_button"
+            android:drawablePadding="5dp"
+            android:button="@null"
+            android:layout_gravity="center"
+            android:textSize="11sp"
+            android:textColor="#333333"
+            android:text="更多" />
+    </RadioGroup>
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/id_more"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:layout_marginRight="@dimen/list_divider_height"-->
+        <!--android:orientation="horizontal">-->
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@mipmap/ic_more"/>-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:gravity="center"-->
+            <!--android:textColor="#333333"-->
+            <!--android:text="更多"/>-->
+    <!--</LinearLayout>-->
+</LinearLayout>

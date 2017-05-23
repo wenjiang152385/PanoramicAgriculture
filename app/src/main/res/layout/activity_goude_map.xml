@@ -1,0 +1,137 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/layout_coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--app bar layout-->
+        <LinearLayout
+            android:id="@+id/layout_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:orientation="vertical"
+            >
+
+            <FrameLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="?attr/colorPrimary"
+                tools:targetApi="honeycomb"
+                >
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl_title"
+                    android:layout_gravity="center_vertical"
+                    >
+
+                    <ImageView
+                        android:id="@+id/display_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@mipmap/display_data_icon" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_yaw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/yaw" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/toolbar_title_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    >
+
+                    <!--<ImageView-->
+                    <!--android:id="@+id/app_toolbar_icon"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentLeft="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:src="@mipmap/app_toolbar_icon" />-->
+
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="2dp"
+                        android:text="@string/app_name" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@+id/toolbar_title"
+                        android:src="@mipmap/drop_down_triangle" />
+                </RelativeLayout>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/ordinary_supply_and_deman_tv"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="#cc323232"
+                android:gravity="center"
+                android:text="供求数据获取中"
+                android:visibility="gone"/>
+            <com.oraro.panoramicagriculture.ui.view.SupplyAndDemandView
+                android:id="@+id/ordinary_supply_and_deman_view"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#cc323232"/>
+        </LinearLayout>
+
+        <!--<include layout="@layout/view_pager_layout" />-->
+
+
+        <com.oraro.panoramicagriculture.ui.view.MyMapView
+            android:id="@+id/oraro_map_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </LinearLayout>
+
+    <!--<android.support.design.widget.NavigationView-->
+    <!--android:id="@+id/nav_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="start"-->
+    <!--android:background="#99292929"-->
+    <!--app:headerLayout="@layout/drawer_layout"-->
+    <!--app:menu="@menu/drawer" />-->
+    <!--<com.oraro.jeremyfeinstein.slidingmenu.lib.SlidingMenu-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="#99292929"-->
+    <!--android:id="@+id/slidmenu"-->
+    <!--sliding:viewAbove="@layout/drawer_layout"-->
+    <!--&gt;-->
+
+    <!--</com.oraro.jeremyfeinstein.slidingmenu.lib.SlidingMenu>-->
+</FrameLayout>

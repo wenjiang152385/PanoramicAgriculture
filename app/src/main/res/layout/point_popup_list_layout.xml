@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+    <!--universal listview-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/point_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#cc323232"
+        android:clipToPadding="false"
+        android:scrollbars="vertical" />
+
+    <com.oraro.panoramicagriculture.ui.view.ErrorLayout
+        android:id="@+id/error_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

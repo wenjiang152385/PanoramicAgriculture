@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="#666633"
+    >
+    <!--此颜色只是为了突出状态栏的颜色-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/yrd_top_titlebar"
+        android:background="#f4f4f4"
+        android:orientation="vertical">
+              <android.support.v7.widget.RecyclerView
+                  android:layout_width="match_parent"
+                  android:id="@+id/recycle_view"
+                  android:layout_height="40dp"
+                  android:visibility="gone"
+                  >
+
+              </android.support.v7.widget.RecyclerView>
+        <!-- 选项卡 -->
+
+        <LinearLayout
+            android:layout_below="@+id/linear_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:background="#fff"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <!-- tab1 -->
+
+            <TextView
+                android:id="@+id/tab1_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="粮食作物"
+                android:textColor="@color/button_bgd_pressed"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tab2_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="经济作物"
+                android:textColor="#666666"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tab3_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="饲料作物"
+                android:textColor="#666666"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/title_content_layout"
+            android:background="#666666" />
+
+        <View
+            android:id="@+id/cursor"
+            android:layout_width="100dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dip"
+            android:background="@drawable/gradient_color" />
+        <!-- 选项卡内容显示区域 -->
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/third_vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

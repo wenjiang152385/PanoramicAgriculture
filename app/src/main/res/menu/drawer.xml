@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/g1"
+        android:visible="false">
+        <item
+            android:id="@+id/menu_my_farm"
+            android:checkable="true"
+            android:icon="@mipmap/farm_icon_white"
+            android:title="@string/my_farm" />
+    </group>
+
+    <group android:id="@+id/g2"
+        android:visible="false">
+        <item
+            android:id="@+id/menu_my_purchaser"
+            android:checkable="true"
+            android:icon="@mipmap/ic_navigation_purchase"
+            android:title="@string/my_purchaser"/>
+    </group>
+
+    <group android:id="@+id/g4"
+        android:visible="false">
+        <item
+            android:id="@+id/menu_new_farm"
+            android:checkable="true"
+            android:icon="@mipmap/ic_navigation_new_farm"
+            android:title="@string/new_farm" />
+    </group>
+
+    <group android:id="@+id/g5"
+        android:visible="false">
+        <item
+            android:id="@+id/menu_new_purchaser"
+            android:checkable="true"
+            android:icon="@mipmap/ic_navigation_purchase"
+            android:title="@string/new_purchasing_point" />
+    </group>
+
+    <group android:id="@+id/g7"
+        android:visible="false">
+        <item
+            android:id="@+id/menu_new_dc"
+            android:checkable="true"
+            android:icon="@mipmap/ic_dc"
+            android:title="@string/new_dc" />
+    </group>
+
+    <group android:id="@+id/g6"
+        android:visible="false">
+        <item
+            android:id="@+id/menu_new_user"
+            android:checkable="true"
+            android:icon="@mipmap/ic_navigation_user"
+            android:title="@string/new_user" />
+    </group>
+
+    <group android:id="@+id/g3"
+        android:visible="false">
+        <item
+            android:id="@+id/menu_log_off"
+            android:checkable="true"
+            android:title="@string/log_off" />
+    </group>
+</menu>

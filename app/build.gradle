@@ -1,0 +1,88 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    signingConfigs {
+        signed {
+            keyAlias 'oraro'
+            keyPassword '123456'
+            storeFile file('PanoramicAgriculture.jks')
+            storePassword '123456'
+        }
+    }
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+    defaultConfig {
+        applicationId "com.oraro.panoramicagriculture"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        //启用renderscript
+        renderscriptTargetApi = 18
+        renderscriptSupportModeEnabled = true
+        multiDexEnabled true
+
+        manifestPlaceholders = [
+                GETUI_APP_ID : "Xi7ybFRQ7n9jGqPTw7NCv3",
+                GETUI_APP_KEY : "baVEwl0bBf5GA2VAp61yJ3",
+                GETUI_APP_SECRET : "TDVc7LRS989xXFKwRY38Q3"
+        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.signed
+        }
+    }
+}
+
+greendao {
+    schemaVersion 1
+    daoPackage 'com.oraro.panoramicagriculture.data.dao'
+    targetGenDir 'src/main/java'
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.2.0'
+    compile 'com.android.support:design:24.2.0'
+    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
+    compile 'io.reactivex:rxjava:1.1.8'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'org.greenrobot:greendao:3.0.1'
+    compile 'org.greenrobot:greendao-generator:3.0.0'
+    compile 'com.facebook.fresco:fresco:1.1.0'
+    compile 'com.android.support:recyclerview-v7:24.2.0'
+    compile 'com.android.support:cardview-v7:24.2.0'
+
+    compile project(':MPChartLib')
+    compile project(path: ':CityPickerView')
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    compile 'com.squareup.picasso:picasso:2.3.2'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.slider:library:1.1.5@aar'
+    compile('com.android.support:support-v4:24.2.0') {
+        force = true;
+    }
+    compile('com.android.support:appcompat-v7:24.2.0') {
+        exclude module: 'support-v4'
+    }
+    compile files('libs/wheelview_1.3.3.jar')
+    compile project(path: ':ImagePicker')
+    compile files('libs/AMap2DMap_4.2.0_AMapSearch_4.0.0_AMapLocation_3.3.0_20170120.jar')
+    compile 'com.belerweb:pinyin4j:2.5.1'
+    compile project(path: ':library')
+    compile files('libs/GetuiSDK2.10.2.0.jar')
+    compile 'com.android.support:multidex:1.0.0'
+
+}

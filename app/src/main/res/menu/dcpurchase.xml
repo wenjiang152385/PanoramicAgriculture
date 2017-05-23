@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_edit_dc"
+        app:showAsAction="ifRoom"
+        android:title="编辑配送中心"
+        />
+    <item
+        android:id="@+id/action_add_dc1"
+        app:showAsAction="never"
+        android:title="采购"
+        android:icon="@mipmap/btn_add_farm_detail"
+        />
+    <item
+        android:id="@+id/action_add_dc3"
+        app:showAsAction="never"
+        android:title="配送"
+        android:icon="@mipmap/btn_add_farm_detail"
+        />
+
+    <item
+        android:id="@+id/action_chart"
+        app:showAsAction="never"
+        android:title="@string/menu_title"
+        />
+
+</menu>

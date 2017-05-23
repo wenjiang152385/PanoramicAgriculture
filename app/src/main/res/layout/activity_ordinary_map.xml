@@ -1,0 +1,103 @@
+<com.oraro.panoramicagriculture.ui.view.MyDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/layout_coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--app bar layout-->
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/layout_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            app:elevation="0dp">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                tools:targetApi="honeycomb">
+
+                <RelativeLayout
+                    android:id="@+id/toolbar_title_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal">
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/app_toolbar_icon"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:src="@mipmap/app_toolbar_icon" />-->
+
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_centerVertical="true"
+                        android:text="@string/app_name" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@+id/toolbar_title"
+                        android:src="@mipmap/drop_down_triangle" />
+                </RelativeLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+            <TextView
+                android:id="@+id/ordinary_supply_and_deman_tv"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:gravity="center"
+                android:background="#cc323232"
+                android:text="供求数据获取中"
+                android:visibility="gone"
+                />
+            <com.oraro.panoramicagriculture.ui.view.SupplyAndDemandView
+                android:id="@+id/ordinary_supply_and_deman_view"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#cc323232"/>
+        </android.support.design.widget.AppBarLayout>
+
+
+        <!--<include layout="@layout/view_pager_layout" />-->
+
+
+        <com.oraro.panoramicagriculture.ui.view.MyMapView
+            android:id="@+id/oraro_map_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:background="#99292929"
+        android:id="@+id/ll_yaw"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="left"
+        >
+
+        <include layout="@layout/drawer_layout" />
+
+        <include layout="@layout/item_yaw_item"/>
+    </LinearLayout>
+</com.oraro.panoramicagriculture.ui.view.MyDrawerLayout>
